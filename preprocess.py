@@ -1,7 +1,7 @@
 import argparse
 
 from utils.tools import get_configs_of
-from preprocessor.preprocessor import Preprocessor
+from preprocessor.preprocessor_daily import Preprocessor
 
 
 if __name__ == "__main__":

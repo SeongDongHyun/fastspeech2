@@ -1,7 +1,7 @@
 import argparse
 
 from utils.tools import get_configs_of
-from preprocessor import ljspeech, aishell3, libritts, vctk, kss, multi_kr
+from preprocessor import ljspeech, aishell3, libritts, vctk, kss, multi_kr, dailytalk
 
 
 def main(config):
@@ -17,6 +17,8 @@ def main(config):
         kss.prepare_align(config)
     if "multi_kr" in config["dataset"]:
         multi_kr.prepare_align(config)
+    if "DailyTalk" in config["dataset"]:
+        dailytalk.prepare_align(config)
 
 
 if __name__ == "__main__":
